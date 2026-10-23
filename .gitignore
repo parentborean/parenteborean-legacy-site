@@ -1,0 +1,8 @@
+# This repository is only the previous website.
+*.wpress
+*.zip
+.env
+webmaster-email.txt
+chats.txt
+Thumbs.db
+Desktop.ini

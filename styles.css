@@ -1,0 +1,92 @@
+:root {
+  --navy: #002157;
+  --blue: #23508b;
+  --steel: #6e85a6;
+  --text: #333333;
+  --muted: #555555;
+  --bg: #ffffff;
+  --soft: #f6f6f6;
+  --line: #e6e6e6;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+a { color: var(--blue); }
+img { max-width: 100%; }
+.wrap { width: min(1100px, calc(100% - 2rem)); margin: 0 auto; }
+.narrow { width: min(760px, 100%); }
+h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: normal; color: var(--navy); }
+.site-header {
+  position: sticky; top: 0; background: #fff; border-bottom: 1px solid var(--line); z-index: 2;
+}
+.header-inner { display: flex; align-items: center; gap: 1.5rem; padding: 0.8rem 0; }
+.brand img { height: 58px; width: auto; display: block; }
+nav { display: flex; gap: 1.1rem; margin-left: auto; }
+nav a { color: var(--navy); text-decoration: none; font-size: 0.85rem; font-weight: bold; text-transform: uppercase; }
+nav a.active, nav a:hover { color: var(--blue); }
+.btn {
+  display: inline-block; background: var(--blue); color: #fff; text-decoration: none;
+  border-radius: 30px; padding: 0.7rem 1.2rem; font-weight: bold; font-size: 0.85rem;
+}
+.btn-ghost { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.5); }
+.hero, .page-hero { background: var(--navy); color: #fff; padding: 4.5rem 0; }
+.hero h1, .page-hero h1, .hero h2 { color: #fff; }
+.kicker { letter-spacing: 0.08em; text-transform: uppercase; color: #c5d2e4; font-size: 0.78rem; }
+.lead { font-size: 1.15rem; max-width: 40rem; color: rgba(255,255,255,.86); }
+.actions { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+.section { padding: 3.5rem 0; }
+.section.alt { background: var(--soft); }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+.card {
+  display: block; background: #fff; border: 1px solid var(--line); border-radius: 8px;
+  padding: 1.2rem; text-decoration: none; color: inherit;
+}
+.card:hover { border-color: var(--blue); }
+.card h3 { margin-top: 0; }
+.content { padding: 2.5rem 0 4rem; }
+.content p { margin: 0 0 1rem; }
+.content ul, .content ol { margin: 0 0 1.2rem 1.2rem; padding: 0; }
+.content li { margin: 0.35rem 0; }
+.disclaimer, .byline { color: var(--steel); font-size: 0.92rem; }
+.site-footer { background: var(--soft); border-top: 1px solid var(--line); padding: 2rem 0 1rem; }
+.footer-grid { display: flex; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+.copy { text-align: center; color: var(--muted); font-size: 0.85rem; }
+.hero-photo {
+  background:
+    linear-gradient(rgba(0, 33, 87, 0.72), rgba(0, 33, 87, 0.82)),
+    url("assets/hero-meeting.jpg") center 40% / cover no-repeat;
+}
+.split { display: grid; grid-template-columns: minmax(240px, 420px) 1fr; gap: 2rem; align-items: center; }
+.split img { width: 100%; border-radius: 8px; display: block; }
+.practice-icon, .practice-banner {
+  width: 148px; height: 148px; object-fit: cover; border-radius: 50%; display: block; margin: 0 auto 0.8rem;
+}
+.people { margin-bottom: 1rem; }
+.person { text-align: center; }
+.person img, .portrait {
+  width: 150px; height: 150px; object-fit: cover; object-position: center top; border-radius: 50%;
+  display: block; margin: 0 auto 0.8rem;
+}
+.portrait { width: 180px; height: 180px; }
+.person h3 { margin-bottom: 0.2rem; }
+.person p { margin: 0; color: var(--steel); }
+.person p + p { color: var(--text); margin-top: 0.45rem; }
+.staff-heading { margin-top: 2.2rem; }
+.article-thumb, .article-photo, .feature-photo { width: 100%; border-radius: 8px; display: block; object-fit: cover; }
+.article-thumb { height: 160px; margin: -1.2rem -1.2rem 1rem; width: calc(100% + 2.4rem); border-radius: 8px 8px 0 0; }
+.article-photo, .feature-photo { max-height: 420px; margin: 0 0 1.4rem; }
+.anniversary { width: 180px; display: block; margin: 0 0 1rem; }
+.quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+.quote { margin: 0; background: #fff; border-left: 4px solid var(--blue); padding: 1rem 1.2rem; }
+.quote p { margin: 0 0 0.6rem; }
+.quote footer { color: var(--steel); font-size: 0.9rem; }
+@media (max-width: 800px) {
+  .header-inner { flex-wrap: wrap; }
+  nav { order: 3; width: 100%; overflow: auto; }
+  .split { grid-template-columns: 1fr; }
+}
